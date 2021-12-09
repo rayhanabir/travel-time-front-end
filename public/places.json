@@ -1,0 +1,44 @@
+[
+    {
+      "id": 1,
+      "name": "Africa",
+      "description": "This is our top booking place. this place is so beautiful. if you are a couple it is one of the best places for your trip",
+      "price": 450,
+      "image": "https://i.ibb.co/Cv9FJk6/place-3.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Cairo-Egypt",
+      "description": "This is our top booking place. this place is so beautiful. if you are a couple it is one of the best places for your trip",
+      "price": 550,
+      "image": "https://i.ibb.co/tsyTwMY/place-5.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Dubai",
+      "description": "This is our top booking place. this place is so beautiful. if you are a couple it is one of the best places for your trip",
+      "price": 650,
+      "image": "https://i.ibb.co/q5GGtQz/place-6.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Australia",
+      "description": "This is our top booking place. this place is so beautiful. if you are a couple it is one of the best places for your trip",
+      "price": 750,
+      "image": "https://i.ibb.co/ftdn6j9/place-2.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Cham Island- Vietnam",
+      "description": "This is our top booking place. this place is so beautiful. if you are a couple it is one of the best places for your trip",
+      "price": 850,
+      "image": "https://i.ibb.co/v3ssgFf/place-1.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Huwai Beach-USA",
+      "description": "This is our top booking place. this place is so beautiful. if you are a couple it is one of the best places for your trip",
+      "price": 950,
+      "image": "https://i.ibb.co/WzWPvD1/place-4.jpg"
+    }
+  ]

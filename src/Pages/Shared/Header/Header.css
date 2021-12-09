@@ -1,0 +1,19 @@
+.nav-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    line-height: 70px;
+    background-color:lightskyblue
+}
+.logo{
+    color: white;
+}
+.nav a{
+    text-decoration: none;
+    margin-right: 17px;
+    font-size: 1.2em;
+    color: white;
+}
+.nav a:hover{
+    color:black
+}

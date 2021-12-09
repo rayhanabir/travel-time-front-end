@@ -1,0 +1,9 @@
+
+.card-area{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap:10px;
+}
+.top-place-content>p{
+    color: black;
+}

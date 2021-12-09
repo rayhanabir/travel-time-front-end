@@ -1,0 +1,20 @@
+.card{
+    padding: 5px;
+}
+.card >h2, p{
+    color: black;
+}
+.price-book{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.price-book button{
+    background-color:goldenrod;
+    width: 120px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    
+}

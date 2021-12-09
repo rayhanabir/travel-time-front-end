@@ -1,0 +1,10 @@
+.login-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.form-information input{
+    width: 400px;
+    margin-top:20px;
+}

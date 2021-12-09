@@ -1,0 +1,17 @@
+.gallary-heading>p{
+    color: black;
+}
+.gallary-image-container{
+    
+    display: flex;
+    flex-wrap: wrap;
+    
+
+}
+.gallary-image-container img{
+    margin:8px
+}
+.gallary-heading{
+    margin: auto;
+    text-align: center;
+}

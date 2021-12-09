@@ -1,0 +1,16 @@
+.holiday-banner-area{
+    background-image: url('../../../image/middle-banner.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    
+}
+.holiday-banner-content-area{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.banner-content >h5, h2, p{
+    color:white;
+}

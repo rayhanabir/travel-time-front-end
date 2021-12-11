@@ -8,7 +8,7 @@ const Login = () => {
     const [email, setEmail] =useState('')
     const [password, setPassword] = useState('');
 
-    const {user,setUser,  signInUsingGoogle, existingUserLogin} = useAuth()
+    const {user,setUser,  signInUsingGoogle, existingUserLogin, setIsLoading} = useAuth()
     const location = useLocation();
     const history = useHistory()
     const redirect_uri = location.state?.from ||'/home';
@@ -16,7 +16,14 @@ const Login = () => {
     const handleGoogleLogin =()=>{
         signInUsingGoogle()
         .then(result=>{
+            setIsLoading(true)
             history.push(redirect_uri)
+        })
+        .catch(err =>{
+            console.log(err.message)
+        })
+        .finally(()=>{
+            setIsLoading(false)
         })
     }
 
@@ -33,12 +40,16 @@ const Login = () => {
         e.preventDefault()
         existingUserLogin(email, password)
         .then(result =>{
+            setIsLoading(true)
             setUser(result.user)
             history.push(redirect_uri)
             
         })
         .catch(err =>{
             console.log(err.message);
+        })
+        .finally(()=>{
+            setIsLoading(false)
         })
 
     }

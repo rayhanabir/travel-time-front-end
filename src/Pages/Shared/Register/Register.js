@@ -8,7 +8,7 @@ const Register = () => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('');
 
-    const {user,setUser,  signInUsingGoogle, createNewUser} = useAuth()
+    const {setUser,  signInUsingGoogle, createNewUser, setIsLoading} = useAuth()
     const location = useLocation();
     const history = useHistory()
     const redirect_uri = location.state?.from ||'/home';
@@ -16,7 +16,14 @@ const Register = () => {
     const handleGoogleSIgnIn = () =>{
         signInUsingGoogle()
         .then(result =>{
+            setIsLoading(true)
             history.push(redirect_uri);
+        })
+        .catch(err=>{
+            console.log(err.message)
+        })
+        .finally(()=>{
+            setIsLoading(false)
         })
 
     }
@@ -36,11 +43,15 @@ const Register = () => {
         e.preventDefault()
         createNewUser(email, password)
         .then(result =>{
+            setIsLoading(true)
             setUser(result.user)
             history.push(redirect_uri)
         })
         .catch(err =>{
             console.log(err.message)
+        })
+        .finally(()=>{
+            setIsLoading(false)
         })
 
     }

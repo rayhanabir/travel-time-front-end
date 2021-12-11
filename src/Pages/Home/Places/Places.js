@@ -1,14 +1,10 @@
 import React, { useEffect, useState } from 'react';
+import usePlaces from '../../hooks/usePlaces';
 import Place from '../Place/Place';
 import './Places.css';
 
 const Places = () => {
-    const [places, setPlaces] = useState([])
-    useEffect(()=>{
-        fetch('places.json')
-        .then(res=>res.json())
-        .then(data =>setPlaces(data))
-    },[])
+    const [places] = usePlaces();
     return (
         <>
             <section className='container'>

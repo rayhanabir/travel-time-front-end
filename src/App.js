@@ -12,6 +12,8 @@ import AuthProvider from './context/AuthProvider';
 import PrivateRoute from './Pages/Others/PrivateRoute/PrivateRoute';
 import ManageOrder from './Pages/Others/ManageOrder/ManageOrder';
 import MyOrder from './Pages/Others/MyOrder/MyOrder';
+import AddPlaces from './Pages/Others/AddPlaces/AddPlaces';
+
 
 
 
@@ -39,6 +41,9 @@ function App() {
               </PrivateRoute>
               <PrivateRoute path="/order">
                 <MyOrder/>
+              </PrivateRoute>
+              <PrivateRoute path ='/addplaces'>
+                <AddPlaces/>
               </PrivateRoute>
               <Route path="/register">
                 <Register/>

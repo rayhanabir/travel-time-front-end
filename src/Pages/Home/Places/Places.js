@@ -1,10 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import usePlaces from '../../hooks/usePlaces';
 import Place from '../Place/Place';
 import './Places.css';
 
 const Places = () => {
-    const [places] = usePlaces();
+    const [places, setPlaces] = useState([])
+    useEffect(()=>{
+        fetch('http://localhost:5000/places')
+        .then(res=>res.json())
+        .then(data =>setPlaces(data))
+    },[])
     return (
         <>
             <section className='container'>
@@ -14,7 +18,7 @@ const Places = () => {
                 </div>
                 <div className="card-area my-4">
                     {
-                        places.map(place =><Place key={place.id} place ={place}></Place>)
+                        places.map(place =><Place key={place._id} place ={place}></Place>)
                     }
                 </div>
             </section>

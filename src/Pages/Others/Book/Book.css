@@ -1,0 +1,29 @@
+.place-container{
+    display: flex;
+    margin-top: 30px;
+    
+}
+.place-book-section{
+    margin-left: 30px;
+}
+.order-btn{
+    border: none;
+    padding: 8px;
+    background-color: lightpink;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: 600;
+    color:black
+}
+.ticket-info form{
+    display: flex;
+    flex-direction: column;
+}
+.total-ticket{
+    background-color:rgba(140, 176, 177, 0.315);
+    width: 150px;
+   padding: 7px;
+    display: inline-block;
+    margin: 7px;
+    text-align: center;
+}

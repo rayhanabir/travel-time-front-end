@@ -6,15 +6,20 @@ import { faPlus, faMinus } from '@fortawesome/free-solid-svg-icons'
 import { useForm } from "react-hook-form";
 
 import { useParams } from 'react-router';
-import { Link, useHistory } from 'react-router-dom';
+import { Link} from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
+import axios from 'axios';
+import { useHistory } from 'react-router-dom';
 
 const Book = () => {
     const [singlePlace, setSinglePlace] = useState({})
     const [ticketCount, setTicketCount] = useState(1)
-    const {name, image, price, description, _id} = singlePlace;
+    const {name, image, price, description} = singlePlace;
+    // console.log(singlePlace);
     const {user} = useAuth()
     const {bookId} = useParams();
+
+        const history = useHistory()
 
   
     useEffect(()=>{
@@ -35,13 +40,20 @@ const Book = () => {
         order.data = data;
         order.ticketCount = ticketCount
         order.totalPrice = totalPrice;
-        console.log(order)
+        order.product = singlePlace
+        // console.log(order)
+    
+        //post data to server
+        axios.post('http://localhost:5000/orders', order)
+        .then(res =>{
+            if(res.data.insertedId){
+                alert("order placed successfully")
+                history.push('/myOrder')
+            }
+        })
     };
 
-  
 
-
-    
     return (
         <>
            
@@ -61,10 +73,12 @@ const Book = () => {
                             <span className='minus-button'onClick={handleDecrease} ><FontAwesomeIcon icon={faMinus}/></span>
                             
                             <form onSubmit={handleSubmit(onSubmit)}>
-                            <input {...register("name", { required: true,})} value={user.displayName} />
-                            <input {...register("email")} value={user.email} />
-                            <input  {...register("age",)} placeholder="address"/>
-                            <input type="submit" />
+                                <input {...register("name", { required: true,})} value={user.displayName} />
+                                <input {...register("email")} value={user.email} />
+                                <input  {...register("address",)} placeholder="Address"/>
+                                
+                                <input type="submit" />
+                                
                             </form>
 
                         </div>

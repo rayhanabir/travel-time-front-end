@@ -22,8 +22,20 @@
 .total-ticket{
     background-color:rgba(140, 176, 177, 0.315);
     width: 150px;
-   padding: 7px;
+    padding: 7px;
     display: inline-block;
     margin: 7px;
     text-align: center;
+}
+.ticket-info input{
+    width: 60%;
+    margin-bottom: 10px;
+}
+.plus-button{
+    margin: 5px;
+    font-size: 30px;
+}
+.minus-button{
+    margin: 5px;
+    font-size: 30px;
 }

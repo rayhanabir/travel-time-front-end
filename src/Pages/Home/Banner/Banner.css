@@ -4,10 +4,20 @@
 }
 .banner-area{
     background: url(../../../image/top-banner.jpg);
+    opacity: 0.9;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     width: 100%;
     height: 100%;
-    padding: 90px;
+}
+.banner-content >h1, p{
+    color:white;
+}
+.discover-button{
+    background-color:rgb(226, 85, 85);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
 }

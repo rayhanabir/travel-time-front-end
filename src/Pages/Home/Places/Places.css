@@ -4,6 +4,9 @@
     grid-template-columns: repeat(3, 1fr);
     grid-gap:10px;
 }
-.top-place-content>p{
-    color: black;
+.top-place-heading{
+    color: #183153;
+}
+.top-place-content > p{
+    color:#183153 ;
 }

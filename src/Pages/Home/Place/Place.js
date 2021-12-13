@@ -4,8 +4,10 @@ import './Place.css'
 
 const Place = (props) => {
     const {name, image, description, price, _id} = props.place;
+   
     return (
         <div>
+         
             <div className="card-container">
                 <div className="card">
                     <img className="img-fluid" src={image} alt="" />

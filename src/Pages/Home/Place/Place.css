@@ -1,5 +1,7 @@
 .card{
     padding: 5px;
+    border: none;
+    box-shadow: 5px 10px 8px 10px #cfcdcd;
 }
 .card >h2, p{
     color: black;

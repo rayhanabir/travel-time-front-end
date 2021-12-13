@@ -1,0 +1,14 @@
+.order_list_heading{
+    margin-top: 30px;
+}
+.order_list_heading ul{
+    display: flex;
+    justify-content: space-around;
+    background-color: silver;
+
+}
+.order_list_heading ul li{
+    list-style: none;
+    font-size: 1.3em;
+    font-weight: 600;
+}

@@ -4,9 +4,7 @@ import './Book.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlus, faMinus } from '@fortawesome/free-solid-svg-icons'
 import { useForm } from "react-hook-form";
-
 import { useParams } from 'react-router';
-import { Link} from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 import axios from 'axios';
 import { useHistory } from 'react-router-dom';
@@ -18,10 +16,8 @@ const Book = () => {
     // console.log(singlePlace);
     const {user} = useAuth()
     const {bookId} = useParams();
+    const history = useHistory()
 
-        const history = useHistory()
-
-  
     useEffect(()=>{
         fetch(`http://localhost:5000/places/${bookId}`)
         .then(res =>res.json())
@@ -37,7 +33,9 @@ const Book = () => {
     const { register, handleSubmit } = useForm();
     const onSubmit = data => {
         let order = {}
-        order.data = data;
+        order.email = data.email;
+        order.name = data.name;
+        order.address = data.address;
         order.ticketCount = ticketCount
         order.totalPrice = totalPrice;
         order.product = singlePlace

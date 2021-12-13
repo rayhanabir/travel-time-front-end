@@ -1,13 +1,23 @@
 .footer{
     background-color: rgb(209, 207, 207);
-    margin-top: 30px;
+    /* margin-top: 30px; */
+    
 }
 .footer-container{
-    width: 96%;
+    width: 92%;
     margin: 0 auto;
-    padding: 20px;
+    padding: 30px;
 }
-.footer-content{
+.footer-content{ 
     display: grid;
     grid-template-columns: repeat(5, 1fr);
+    text-align: center;
+}
+.footer-content >h4{
+    text-align: center;
+}
+.footer-content ul li{
+    list-style: none;
+    font-size: 1em;
+    font-weight: 500;
 }

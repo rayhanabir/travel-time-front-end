@@ -3,6 +3,11 @@ import './Login.css';
 import { Link , useLocation, useHistory} from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { fab, faGoogle } from '@fortawesome/free-brands-svg-icons'
+
+
+
 
 const Login = () => {
     const [email, setEmail] =useState('')
@@ -63,14 +68,20 @@ const Login = () => {
            
           <div className="form-information">
             <form onSubmit={handleLogin}>
-                <input className="form-control" onBlur={handleGetEmail} type="email" placeholder='your email'/>
-                <input className="form-control" onBlur={handleGetPassword} type="password" placeholder="your password"/>
+              
+                <input className="form-control" onBlur={handleGetEmail} type="email" placeholder='Enter Your Email'/>
+        
+                
+                <input className="form-control" onBlur={handleGetPassword} type="password" placeholder="Enter Your Password"/>
                 <input type="submit" value="Login" />
             </form>
-            <h5>Don't have an Account? <Link to='/register'>Sign Up</Link></h5>
+            <p>Don't have an Account? <Link to='/register'>Sign Up</Link></p>
 
-            <div>-------or--------</div>
-            <button className="btn btn-danger" onClick={handleGoogleLogin}>Google Sign in</button>
+            
+            <h3>OR</h3>
+            <button className='google-btn' onClick={handleGoogleLogin}>
+                <FontAwesomeIcon className='google-icon' icon={faGoogle}/> 
+                Google Sign in</button>
           </div>
 
         </div>

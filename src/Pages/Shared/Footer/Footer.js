@@ -12,25 +12,32 @@ const Footer = () => {
                         </div>
                         <div className="support">
                             <h4>SUPPORT</h4>
-                            <p>F.A.Q</p>
-                            <p>Wishlist</p>
-                            <p>Contact Us</p>
-                            <p>About Us</p>
+                                <ul>
+                                    <li>F.A.Q</li>
+                                    <li>WishList</li>
+                                    <li>Contact Us</li>   
+                                    <li>About Us</li>
+
+                                </ul>                          
 
                         </div>
                         <div className="pages">
                             <h4>PAGES</h4>
-                            <p>404 Pages</p>
-                            <p>Password Page</p>
-                            <p>Collection Pages</p>
-                            <p>Products Page</p>
+                                <ul>
+                                    <li>404 Pages</li>
+                                    <li>Password Page</li>
+                                    <li>Collection Pages</li>   
+                                    <li>Products Page</li>
+                                </ul>  
                         </div>
                         <div className="information">
                             <h4>INFORMATON</h4>
-                            <p>Special Products</p>
-                            <p>New Products</p>
-                            <p>Best Sellers</p>
-                            <p>About us</p>
+                                <ul>
+                                    <li>Special Products</li>
+                                    <li>New Products</li>
+                                    <li>Best Sellers</li>   
+                                    <li>About us</li>
+                                </ul>  
                         </div>
                         <div className="newsteller">
                             <h4>NEWSLETTER</h4>

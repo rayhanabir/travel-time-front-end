@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import './Register.css'
 import { Link, useHistory, useLocation } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { fab, faGoogle } from '@fortawesome/free-brands-svg-icons'
 
 const Register = () => {
     const [name, setName] = useState('')
@@ -60,17 +62,19 @@ const Register = () => {
            
            <div className="signIn-form">
                 <div className="register-information">
-                <form onSubmit={handleRegistration}>
-                <input className="form-control" onBlur={handleGetName} type="text" placeholder="your name"/>
-                <input className="form-control" onBlur={handleGetEmail} type="email" placeholder='your email' required/>
-                <input className="form-control" onBlur={handleGetPassword} type="password" placeholder="your password" required/>
-                <input className="form-control"  type="password" placeholder="re-type your password"/>
+            <form onSubmit={handleRegistration}>
+                <input className="form-control" onBlur={handleGetName} type="text" placeholder="Enter Your Name"/>
+                <input className="form-control" onBlur={handleGetEmail} type="email" placeholder='Enter Your Email' required/>
+                <input className="form-control" onBlur={handleGetPassword} type="password" placeholder="Enter Your Password" required/>
+                <input className="form-control"  type="password" placeholder="Re-type Your Password"/>
                 <input className="form-control" type="submit" value="Sign in" />
             </form>
-            <h5>Already have an Account? <Link to='/login'>Login</Link></h5>
+            <p>Already have an Account? <Link to='/login'>Login</Link></p>
 
-            <div>-------or--------</div>
-             <button className="btn btn-danger" onClick={handleGoogleSIgnIn}>Google Sign in</button>
+            <h3>OR</h3>
+             <button className="google-btn" onClick={handleGoogleSIgnIn}>
+                 <FontAwesomeIcon className='google-icon' icon={faGoogle}/>
+                 Google Sign in</button>
              </div>
         </div>
         </>

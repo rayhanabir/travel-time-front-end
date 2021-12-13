@@ -2,7 +2,6 @@ import axios from 'axios';
 import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
-import OrderList from '../OrderList/OrderList';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrashAlt } from '@fortawesome/free-solid-svg-icons'
 import './ManageOrder.css';
@@ -26,7 +25,7 @@ const ManageOrder = () => {
         })
         .then(res => res.json())
         .then(data =>{
-            if(data.deletedCount ==1){
+            if(data.deletedCount == 1){
                 alert('deleted succefully')
                 const remaining = orderList.filter(order =>order._id !== id)
                 setOrderList(remaining);

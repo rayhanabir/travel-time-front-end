@@ -2,8 +2,45 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    
+}
+.register-information{
+    margin: 30px 30px;
+    width: 450px;
+    box-shadow: 8px 8px 8px 8px gray;
+    padding: 20px;
+    text-align: center;
+    border-radius: 7px;
+   
 }
 .register-information input{
     width: 400px;
-    margin-top: 10px;
+    margin: 7px 7px;
+}
+
+.register-information h3{
+    max-width: 200px;
+    text-align: center;
+    margin: auto;
+    position: relative;
+}
+.register-information h3::before{
+    content: '';
+    width: 70px;
+    height: 2px;
+    display: block;
+    background-color: black;
+    position: absolute;
+    top: 50%;
+    left: 0;
+}
+.register-information h3::after{
+    content: '';
+    width: 70px;
+    height: 2px;
+    display: block;
+    background-color: black;
+    position: absolute;
+    top: 50%;
+    right: 0;
 }
